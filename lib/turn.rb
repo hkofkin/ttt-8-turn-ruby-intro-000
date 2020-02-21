@@ -29,8 +29,9 @@ end
 def turn(board)
   binding.pry
   puts "Please enter 1-9:"
-#  move(board, input_to_index(user_input), value="X")
+  user_input = gets.strip
   if valid_move?(board, index)
+    move(board, input_to_index(user_input), value="X")
     display_board(board)
   else until valid_move?(board, index)
     turn(board)
