@@ -25,13 +25,13 @@ def move(board, input_to_index, value="X")
   return board[input_to_index] = value
 end
 
-def turn(board, index)
+def turn(board)
   puts "Please enter 1-9:"
   move(board, input_to_index, value="X")
   if valid_move?(board, index)
     display_board(board)
   else until valid_move?(board, index)
-    turn(board, index)
+    turn(board)
     end
   end
   display(board)
